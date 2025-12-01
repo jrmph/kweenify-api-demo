@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kweenify - Transparent Text Generator</title>
+  
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="kweenify-style.css">
+</head>
+<body>
+  <div class="container fade-in">
+    <div class="header">
+      <h1>KWEENIFY</h1>
+      <p class="subtitle">Advanced Transparent Text Art Generator</p>
+      <div class="transparent-badge">
+        <i class='bx bx-check-circle'></i>
+        Transparent Background Support
+      </div>
+    </div>
+
+    <div class="credit">
+      Created by <strong>Jhames Martin</strong> • 
+      <a href="https://www.facebook.com/jhames.rhonnielle.martin" target="_blank" rel="noopener noreferrer">
+        facebook.com/jhames.rhonnielle.martin
+      </a>
+    </div>
+
+    <div class="features">
+      <div class="feature">
+        <i class='bx bx-check-shield feature-icon'></i>
+        <span class="feature-text">True Transparency</span>
+      </div>
+      <div class="feature">
+        <i class='bx bx-mobile-alt feature-icon'></i>
+        <span class="feature-text">Fully Responsive</span>
+      </div>
+      <div class="feature">
+        <i class='bx bx-download feature-icon'></i>
+        <span class="feature-text">HD Downloads</span>
+      </div>
+      <div class="feature">
+        <i class='bx bx-color-fill feature-icon'></i>
+        <span class="feature-text">Custom Colors</span>
+      </div>
+    </div>
+
+    <div class="controls">
+      <div class="input-wrapper">
+        <input type="text" id="textInput" placeholder="TYPE YOUR TEXT HERE" maxlength="80" aria-label="Enter your text here" />
+      </div>
+
+      <div class="background-options">
+        <div class="background-group">
+          <label for="bgColor">
+            <i class='bx bx-palette'></i>
+            Color Background
+          </label>
+          <div class="color-picker">
+            <input type="color" id="bgColor" value="#ffffff" title="Choose background color" aria-label="Choose background color" />
+          </div>
+        </div>
+
+        <div class="background-group">
+          <label>
+            <i class='bx bx-check'></i>
+            Transparent
+          </label>
+          <button class="transparent-toggle" id="transparentToggle" onclick="toggleTransparent()" aria-pressed="false">
+            <i class='bx bx-check'></i>
+            Enable
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button onclick="generateTransparent()" aria-label="Generate transparent text art">
+        <i class='bx bx-check-circle'></i>
+        GENERATE TRANSPARENT
+      </button>
+      <button class="secondary" onclick="generateWithColor()" aria-label="Generate text art with color background">
+        <i class='bx bx-palette'></i>
+        GENERATE WITH COLOR
+      </button>
+    </div>
+
+    <div id="loading">
+      <i class='bx bx-loader-alt bx-spin'></i>
+      Creating transparent art...
+    </div>
+
+    <div class="preview-grid" id="previewGrid">
+      <div class="preview-item">
+        <h3 style="margin-bottom: clamp(10px, 2vw, 15px); color: var(--text-dark);">
+          <i class='bx bx-check-circle'></i> Transparent Version
+        </h3>
+        <img id="transparentPreview" alt="Transparent preview" style="max-width: 100%; display: none; border-radius: 12px; width: 100%; height: auto;" />
+        <div class="download-section" id="transparentDownload">
+          <a id="transparentDownloadLink" class="download-btn" download>
+            <i class='bx bx-download'></i>
+            Download Transparent PNG
+          </a>
+        </div>
+      </div>
+      
+      <div class="preview-item">
+        <h3 style="margin-bottom: clamp(10px, 2vw, 15px); color: var(--text-dark);">
+          <i class='bx bx-palette'></i> With Background
+        </h3>
+        <img id="colorPreview" alt="Color background preview" style="max-width: 100%; display: none; border-radius: 12px; width: 100%; height: auto;" />
+        <div class="download-section" id="colorDownload">
+          <a id="colorDownloadLink" class="download-btn" download>
+            <i class='bx bx-download'></i>
+            Download with Background
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="api-info">
+        <strong>API Endpoint:</strong> 
+        <code>https://kweenify-api.onrender.com/api/generate</code>
+      </div>
+      <p>✨ Supports both transparent and custom background generation | 🎨 HD quality output | 📱 Mobile-friendly</p>
+    </div>
+  </div>
+  <script src="kweenify-function-script.js"></script>
+</body>
+</html>

@@ -1,14 +1,13 @@
-
-# Kweenify – Transparent Text Art Generator
+# Kweenify – Kweenyasmin font generator
 
 **Live Demo** → https://kweenify-beryl.vercel.app/  
 **Source Code** → https://github.com/jrmph/kweenify-mycode  
 **API & Interactive Tester** → https://kweenify-api.onrender.com  
 **Creator** → [Jhames Martin](https://www.facebook.com/jhames.rhonnielle.martin)
 
-![preview1](preview1.png)
-![preview2](preview2.png)
-![preview3](preview3.png)
+![preview1](preview.png)
+![preview2](download%20(12).png)
+![preview3](preview1.png)
 
 ### One single HTML file. No dependencies. Pure magic.
 
@@ -106,5 +105,5 @@ Just please keep the **“Created by Jhames Martin”** credit visible (the foot
 
 ---
 
-**Made by Jrmph, masarap mag code pag may kape
+### Made by Jrmph, masarap mag code pag may kape
 — Jhames Martin
